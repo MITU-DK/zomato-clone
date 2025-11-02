@@ -1,3 +1,4 @@
+
  import React, { useState } from 'react'
  import Navbar from './components/Navbar/Navbar'
 import { Route, Routes } from 'react-router-dom'
@@ -28,4 +29,3 @@ import LoginPopup from './components/LoginPopup/LoginPopup'
  }
  
  export default App
- 
