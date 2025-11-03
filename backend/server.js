@@ -7,8 +7,8 @@ import 'dotenv/config'
 import cartRouter from './routes/cartRoute.js'
 //app config
 const app = express()
-const port=4000
- 
+const port = 4000
+
 //middleware
 app.use(express.json())
 app.use(cors())
@@ -18,18 +18,23 @@ connectDB();
 
 
 //api endpoint
+<<<<<<< HEAD
 app.use("/api/food",foodRouter)
 app.use("/images",express.static('upload'))
 app.use("/api/user",userRouter)
 app.use("/api/cart",cartRouter)
+=======
+app.use("/api/food", foodRouter)
+app.use("/images", express.static('uploads'))
+>>>>>>> c7e15fe (Add admin panel)
 
-app.get("/",(req,res)=>{
+app.get("/", (req, res) => {
     res.send("API WORKING")
 })
 
-app.listen(port,()=>{
+app.listen(port, () => {
     console.log(`server started  on http://localhost:${port}`)
-}) 
+})
 
 
 //mongodb+srv://MMM:PROJECT2025@cluster0.jbnp9m6.mongodb.net/?
